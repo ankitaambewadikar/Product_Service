@@ -41,11 +41,11 @@ public class ProductServiceTest {
 		Map<Integer, String> review = new HashMap<Integer, String>();
 		review.put(1, "Excellent");
 		List<String> image = new ArrayList<String>();
-		image.add("imageOne");
+		image.add("C:/Users/aambewad/Desktop/Images/101.jpg");
 		Map<String, String> specification = new HashMap<String, String>();
 		specification.put("SpectOne", "two compartments");
 		specification.put("SpectTwo", "Adjustable strap");
-		product = new Product(101, "handbag", "bags and Luggage", rating, review, image, 1400.00, "good product",
+		product = new Product(101, "handbag", "bags and Luggage", rating, review, image, 1500.00, "good product",
 				specification);
 	}
 
@@ -61,7 +61,7 @@ public class ProductServiceTest {
 	@Test
 	public void testForGetAllProducts() {
 		List<Product> products = productServiceImpl.getAllProducts();
-		assertEquals(82, products.size());
+		assertEquals(81, products.size());
 	}
 
 	@Test

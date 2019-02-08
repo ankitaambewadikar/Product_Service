@@ -1,12 +1,15 @@
 package com.cg.eShoppingZone.productservice.service;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
+import java.util.Optional;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -41,6 +44,7 @@ public class ProductServiceTest {
 		image.add("imageOne");
 		Map<String, String> specification = new HashMap<String, String>();
 		specification.put("SpectOne", "two compartments");
+		specification.put("SpectTwo", "Adjustable strap");
 		product = new Product(101, "handbag", "bags and Luggage", rating, review, image, 1400.00, "good product",
 				specification);
 	}
@@ -53,46 +57,63 @@ public class ProductServiceTest {
 	 * 
 	 * }
 	 */
+	
+	@Test
+	public void testForGetAllProducts() {
+		List<Product> products = productServiceImpl.getAllProducts();
+		assertEquals(82, products.size());
+	}
 
 	@Test
 	public void testForGetProductByIdCheckId() {
-		Product actualProduct = productServiceImpl.getProductById(101);
-		assertEquals(actualProduct.getProductId(), 101);
+		Optional<Product> actualProduct = productServiceImpl.getProductById(101);
+		assertEquals(actualProduct.get().getProductId(), 101);
 
 	}
 
 	@Test
 	public void testForGetProductByIdCheckProductObject() {
-		Product actualProduct = productServiceImpl.getProductById(101);
-		assertEquals(product, actualProduct);
+		Optional<Product> actualProduct = productServiceImpl.getProductById(101);
+		assertEquals(product, actualProduct.get());
 
 	}
 
 	@Test(expected = NoSuchElementException.class)
 	public void testForGetProductByIdProductNotAvailable() {
-		Product actualProduct = productServiceImpl.getProductById(90);
+		Optional<Product> actualProduct = productServiceImpl.getProductById(90);
 
-		assertEquals(product, actualProduct);
+		assertEquals(product, actualProduct.get());
 	}
 
 	@Test
 	public void testForGetProductByName() {
-		Product actualProduct = productServiceImpl.getProductByName("handbag");
-		assertEquals(product, actualProduct);
+		Optional<Product> actualProduct = productServiceImpl.getProductByName("handbag");
+		assertEquals(product, actualProduct.get());
 
 	}
 
 	@Test(expected = NoSuchElementException.class)
 	public void testForGetProductByNameNotAvailable() {
-		Product actualProduct = productServiceImpl.getProductByName("shoes");
-		assertEquals(product, actualProduct);
-		// Assert.assertEquals(product, actualProduct);
+		Optional<Product> actualProduct = productServiceImpl.getProductByName("shoes");
+		assertEquals(product, actualProduct.get());
+
 	}
 
 	@Test
 	public void testForUpdateProducts() {
-		product.setPrice(1500.00);
-		Product actualProduct = productServiceImpl.updateProducts(actualProduct);
+		Product actualProduct = productServiceImpl.getProductById(102).get();
+		actualProduct.setPrice(45600.00);
+		// actualProduct.setDescription("Excellent product");
+		Product updatedProduct = productServiceImpl.updateProducts(actualProduct);
+		assertEquals(actualProduct, updatedProduct);
+	}
+
+	@Test
+	public void testForDeleteProductByIdElementPresent() {
+
+		productServiceImpl.deleteProductById(204);
+		Optional<Product> actualProduct = productServiceImpl.getProductById(204);
+		assertFalse(actualProduct.isPresent());
 	}
 
 }

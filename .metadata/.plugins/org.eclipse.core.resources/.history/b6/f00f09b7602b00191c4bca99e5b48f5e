@@ -43,7 +43,7 @@ public class ProductResource {
 
 		Optional<Product> product = productService.getProductById(productId);
 		if (!product.isPresent()) {
-			// System.out.println("in get method " + product);
+			//System.out.println("in get method " + product);
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		}
 		return new ResponseEntity<>(product.get(), HttpStatus.OK);
@@ -58,12 +58,12 @@ public class ProductResource {
 		}
 		return new ResponseEntity<>(product.get(), HttpStatus.OK);
 	}
-
-	@GetMapping("/category/{category}")
-	public ResponseEntity<List<Product>> getProductsByCategory(@PathVariable String category) {
+	
+	@GetMapping("/productName/{productName}")
+	public ResponseEntity<Product> getProductsByCategory(@PathVariable String category) {
 
 		List<Product> product = productService.getProductByCategory(category);
-
+		
 		return new ResponseEntity<>(product, HttpStatus.OK);
 	}
 

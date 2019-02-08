@@ -18,8 +18,6 @@ public interface ProductService {
 	Product updateProducts(Product product);
 	
 	void deleteProductById(int productId);
-
-	List<Product> getProductByCategory(String category);
 	
 
 }
