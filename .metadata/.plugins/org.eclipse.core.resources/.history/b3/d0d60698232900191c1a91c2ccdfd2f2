@@ -1,0 +1,37 @@
+package com.cg.eShoppingZone.productservice.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+import com.cg.eShoppingZone.productservice.entity.Product;
+
+@Service
+public class ProductServiceImpl implements ProductService {
+
+	@Override
+	public void addProducts(Product product) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Product> getAllProducts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Optional<Product> getProductById() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Optional<Product> getProductByName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

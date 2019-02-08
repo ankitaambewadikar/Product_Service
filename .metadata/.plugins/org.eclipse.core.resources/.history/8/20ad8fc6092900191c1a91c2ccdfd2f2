@@ -1,0 +1,23 @@
+package com.cg.eShoppingZone.productservice.entity;
+
+import java.util.List;
+import java.util.Map;
+
+public class Product {
+
+	private int productId;
+	private String productName;
+	private String category;
+	private Map<Integer, Double> rating;
+	private Map<Integer, String> review;
+	private List<String> image;
+	private double price;
+	private String description;
+	private Map<String, String> specification;
+	
+	public Product() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+}

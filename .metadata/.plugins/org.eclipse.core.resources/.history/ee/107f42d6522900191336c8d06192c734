@@ -1,0 +1,48 @@
+
+package com.cg.eShoppingZone.productservice.resource;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.junit4.SpringRunner;
+
+@RunWith(SpringRunner.class)
+
+@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
+public class ProductResourceTest {
+
+	@Autowired
+	private TestRestTemplate testRestTemplate;
+
+	@Test
+	public void testForGetProductByIdForAvavilableProductId() {
+		ResponseEntity<ProductResource> responseEntity = testRestTemplate.getForEntity("/products/151",
+				ProductResource.class);
+		assertEquals(HttpStatus.OK, responseEntity.getStatusCode()); 
+		//assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
+
+	}
+
+	@Test
+	public void testForGetProductByIdForNotAvavilableProductId() {
+		ResponseEntity<ProductResource> responseEntity = testRestTemplate.getForEntity("/products/99",
+				ProductResource.class);
+		assertEquals(HttpStatus.NOT_FOUND, responseEntity.getStatusCode()); 
+		//assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
+
+	}
+	
+	@Test
+	public void testForIncorrectUrl() throw Exception{
+		ResponseEntity<ProductResource> responseEntity = testRestTemplate.getForEntity("/products/", ProductResource.class);
+        assertEquals(HttpStatus.NOT_FOUND, responseEntity.getStatusCode());
+	}
+	
+}

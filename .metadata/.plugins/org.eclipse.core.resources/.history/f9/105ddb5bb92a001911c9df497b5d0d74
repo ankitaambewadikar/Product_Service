@@ -1,0 +1,13 @@
+package com.cg.eShoppingZone.productservice.repository;
+
+import org.junit.Test;
+
+public class ProductRepositoryTest {
+
+	@Test
+	public void testForFindAllProducts() {
+		
+		
+	}
+
+}

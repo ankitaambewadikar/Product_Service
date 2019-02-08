@@ -1,0 +1,14 @@
+package com.cg.eShoppingZone.productservice;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class ProductTest {
+
+	@Test
+	public void test() {
+		Product product = new Product(101,"name","sports","rating","review","image",1400.00,"description","specification");
+	}
+
+}

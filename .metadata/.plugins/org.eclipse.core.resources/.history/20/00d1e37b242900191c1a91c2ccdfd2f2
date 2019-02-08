@@ -1,0 +1,43 @@
+package com.cg.eShoppingZone.productservice.service;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import com.cg.eShoppingZone.productservice.entity.Product;
+import com.cg.eShoppingZone.productservice.repository.ProductRepository;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
+@DataMongoTest
+public class ProductServiceTest {
+
+	@MockBean
+	private ProductRepository productRepository;
+	@Autowired
+	private ProductService productServiceImpl;
+
+	@Test
+	public void addProductTest() {
+		Map<Integer, Double> rating = new HashMap<Integer, Double>();
+		rating.put(1, 10.00);
+		Map<Integer, String> review = new HashMap<Integer, String>();
+		review.put(1, "Excellent");
+		List<String> image = new ArrayList<String>();
+		image.add("imageOne");
+		Map<String, String> specification = new HashMap<String, String>();
+		specification.put("SpectOne", "two compartments");
+		Product product = new Product(101,"handbag","bags and Luggage",rating,review,image,1400.00,"good product",specification);
+		
+	}
+
+}

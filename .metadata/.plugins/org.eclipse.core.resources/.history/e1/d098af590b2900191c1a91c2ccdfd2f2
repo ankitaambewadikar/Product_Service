@@ -1,0 +1,25 @@
+package com.cg.eShoppingZone.productservice.entity;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.junit.Test;
+
+import com.cg.eShoppingZone.productservice.entity.Product;
+
+public class ProductTest {
+
+	@Test
+	public void test() {
+		Map<Integer, Double> rating = new HashMap<Integer, Double>();
+		rating.put(1, 10.00);
+		Map<Integer, String> review = new HashMap<Integer, String>();
+		review.put(1, "Excellent");
+		List<String> image = new ArrayList<String>();
+		image.add("imageOne");
+		Product product = new Product(101,"handbag","bags and Luggage",rating,review,image,);
+	}
+
+}

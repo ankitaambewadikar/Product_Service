@@ -1,0 +1,5 @@
+package com.cg.eShoppingZone.productservice.entity;
+
+public class Product {
+
+}

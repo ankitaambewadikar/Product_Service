@@ -1,0 +1,5 @@
+package com.cg.eShoppingZone.productservice.exception;
+
+public class NoSuchProductFound extends RuntimeException {
+
+}

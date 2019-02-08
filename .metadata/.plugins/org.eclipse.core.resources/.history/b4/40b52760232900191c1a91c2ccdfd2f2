@@ -1,0 +1,10 @@
+package com.cg.eShoppingZone.productservice.service;
+
+import com.cg.eShoppingZone.productservice.entity.Product;
+
+public interface ProductService {
+	
+	void addProducts(Product product);
+	
+
+}
