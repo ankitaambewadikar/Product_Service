@@ -6,30 +6,74 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-	<table>
-		<tr> ProductId </tr>
-		<tr> Product Name </tr>
-		<tr> Category </tr>
-		<tr> Ratings </tr>
-		<tr> Review </tr> 
-		<tr> Images </tr>
-		<tr> Price </tr>
-		<tr> Description </tr>
-		<tr> Specification </tr>
+	<table class="table table-bordered" >
+		<th> ProductId </th>
+		<th> Product Type </th>
+		<th> Product Name </th>
+		<th> Category </th>
+		<th> Ratings </th>
+		<th> Review </th> 
+		<!-- <th> Images </th> -->
+		<th> Price </th>
+		<th> Description </th>
+		<th> Specification </th>
 		
 		<jstl:if test="${product!=null }" >
 			<tr>
 				<td>${product.productId}</td>
+				<td>${product.productType}</td>
 				<td>${product.productName }</td>
 				<td>${product.category}</td>
+				 <td>
+                    <table>
+                        <jstl:forEach var="rating" items="${productList.rating}">
+                            <tr style="font-style: italic;">
+                                <td>${rating.key}</td>
+                                <td>${rating.value}</td>
+                            </tr>
+                        </jstl:forEach>   
+                    </table>   
+                </td>
+                <td>
+                    <table>
+                        <jstl:forEach var="review" items="${productList.review}">
+                            <tr style="font-style: italic;">
+                                <td>${review.key}</td>
+                                <td>${review.value}</td>
+                            </tr>
+                        </jstl:forEach>   
+                    </table>
+                </td>
+				
 				<td>${product.price}</td>
 				<td>${product.description}</td>
+				<td>
+                    <table>
+                        <jstl:forEach var="specification" items="${productList.specification}">
+                            <tr style="font-style: italic;">
+                                <td>${specification.key}</td>
+                                <td>${specification.value}</td>
+                            </tr>
+                        </jstl:forEach> 
+                       </table>
+                 </td> 
 				</tr>
 		</jstl:if>	
-		<jstl:forEach items="${productList}" var="productList">
+		<%-- <jstl:forEach items="${productList}" var="productList">
 			<tr>
 				<td>${productList.productId}</td>
 				<td>${productList.productName }</td>
@@ -37,7 +81,47 @@
 				<td>${productList.price}</td>
 				<td>${productList.description}</td>
 			</tr>
-		</jstl:forEach>
+		</jstl:forEach> --%>
+		<jstl:forEach var="productList" items="${productList}">
+            <tr>
+                <td>${productList.productId}</td>
+                <td>${product.productType}</td>
+                <td>${productList.productName}</td>
+                <td>${productList.category}</td>
+                <td>
+                    <table>
+                        <jstl:forEach var="rating" items="${productList.rating}">
+                            <tr style="font-style: italic;">
+                                <td>${rating.key}</td>
+                                <td>${rating.value}</td>
+                            </tr>
+                        </jstl:forEach>   
+                    </table>   
+                </td>
+                <td>
+                    <table>
+                        <jstl:forEach var="review" items="${productList.review}">
+                            <tr style="font-style: italic;">
+                                <td>${review.key}</td>
+                                <td>${review.value}</td>
+                            </tr>
+                        </jstl:forEach>   
+                    </table>
+                </td>
+                <%-- <td>${productsList.image}</td> --%>
+                <td>${productList.price}</td>
+                <td>${productList.description}</td>
+                <td>
+                    <table>
+                        <jstl:forEach var="specification" items="${productList.specification}">
+                            <tr style="font-style: italic;">
+                                <td>${specification.key}</td>
+                                <td>${specification.value}</td>
+                            </tr>
+                        </jstl:forEach> 
+                       </table>
+                 </td> 
+            </jstl:forEach>   
 	</table>
 </body>
 </html>

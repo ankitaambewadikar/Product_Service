@@ -90,7 +90,7 @@ public class WebsiteEshoppingController {
 	@RequestMapping("/productsByCategory")
 	public ModelAndView getCategory(@RequestParam("category") String category, Model model) {
 
-		List product = restTemplate.getForObject("http://localhost:8989/products/category/{category}", List.class,
+		List product = restTemplate.getForObject("http://localhost:8989/products/category/"+category, List.class,
 				category);
 		return new ModelAndView("AllProducts", "productList", product);
 

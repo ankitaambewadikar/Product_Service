@@ -5419,3 +5419,79 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.springfra
 2019-02-12 09:50:17,078 [Worker-701: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2019-02-12 09:50:17,079 [Worker-701: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2019-02-12 09:50:17,079 [Worker-701: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-02-12 09:50:17,081 [Worker-701: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 09:50:17,081 [Worker-701: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\ASSIGNMENTS\ProductService\product-service\src\test\resources
+2019-02-12 10:49:01,408 [Worker-723: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 10:49:01,409 [Worker-723: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\ASSIGNMENTS\ProductService\wallet-service-master\zuul-API\src\main\resources
+2019-02-12 10:49:01,410 [Worker-723: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\ASSIGNMENTS\ProductService\wallet-service-master\zuul-API\src\main\resources
+2019-02-12 10:49:01,412 [Worker-723: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 10:49:01,412 [Worker-723: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\ASSIGNMENTS\ProductService\wallet-service-master\zuul-API\src\test\resources
+2019-02-12 12:50:25,887 [Worker-753: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 12:50:25,887 [Worker-753: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-02-12 12:50:25,888 [Worker-753: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-02-12 12:50:25,890 [Worker-753: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 12:50:25,890 [Worker-753: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\ASSIGNMENTS\ProductService\websiteEshoppingZone\src\test\resources
+2019-02-12 12:54:42,739 [Worker-759: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 12:54:42,739 [Worker-759: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-02-12 12:54:42,739 [Worker-759: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-02-12 12:54:42,742 [Worker-759: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 12:54:42,742 [Worker-759: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\ASSIGNMENTS\ProductService\websiteEshoppingZone\src\test\resources
+2019-02-12 12:55:18,476 [Worker-759: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 12:55:18,477 [Worker-759: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-02-12 12:55:18,477 [Worker-759: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-02-12 12:55:18,481 [Worker-759: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 12:55:18,481 [Worker-759: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\ASSIGNMENTS\ProductService\websiteEshoppingZone\src\test\resources
+2019-02-12 12:55:40,540 [Worker-757: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 12:55:40,541 [Worker-757: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-02-12 12:55:40,541 [Worker-757: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-02-12 12:55:40,543 [Worker-757: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 12:55:40,544 [Worker-757: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\ASSIGNMENTS\ProductService\websiteEshoppingZone\src\test\resources
+2019-02-12 12:56:27,791 [Worker-760: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 12:56:27,791 [Worker-760: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-02-12 12:56:27,791 [Worker-760: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-02-12 12:56:27,792 [Worker-760: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 12:56:27,792 [Worker-760: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\ASSIGNMENTS\ProductService\websiteEshoppingZone\src\test\resources
+2019-02-12 12:57:42,208 [Worker-758: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 12:57:42,209 [Worker-758: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-02-12 12:57:42,209 [Worker-758: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-02-12 12:57:42,211 [Worker-758: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 12:57:42,211 [Worker-758: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\ASSIGNMENTS\ProductService\websiteEshoppingZone\src\test\resources
+2019-02-12 12:58:33,160 [Worker-761: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 12:58:33,160 [Worker-761: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-02-12 12:58:33,161 [Worker-761: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-02-12 12:58:33,162 [Worker-761: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 12:58:33,162 [Worker-761: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\ASSIGNMENTS\ProductService\websiteEshoppingZone\src\test\resources
+2019-02-12 13:01:38,690 [Worker-761: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 13:01:38,690 [Worker-761: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-02-12 13:01:38,690 [Worker-761: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-02-12 13:01:38,694 [Worker-761: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 13:01:38,694 [Worker-761: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\ASSIGNMENTS\ProductService\websiteEshoppingZone\src\test\resources
+2019-02-12 13:02:50,869 [Worker-764: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 13:02:50,869 [Worker-764: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-02-12 13:02:50,869 [Worker-764: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-02-12 13:02:50,870 [Worker-764: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 13:02:50,871 [Worker-764: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\ASSIGNMENTS\ProductService\websiteEshoppingZone\src\test\resources
+2019-02-12 13:03:00,033 [Worker-760: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 13:03:00,033 [Worker-760: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-02-12 13:03:00,034 [Worker-760: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-02-12 13:03:00,035 [Worker-760: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 13:03:00,035 [Worker-760: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\ASSIGNMENTS\ProductService\websiteEshoppingZone\src\test\resources
+2019-02-12 13:03:18,001 [Worker-761: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 13:03:18,002 [Worker-761: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-02-12 13:03:18,002 [Worker-761: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-02-12 13:03:18,004 [Worker-761: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 13:03:18,004 [Worker-761: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\ASSIGNMENTS\ProductService\websiteEshoppingZone\src\test\resources
+2019-02-12 13:06:02,147 [Worker-758: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 13:06:02,148 [Worker-758: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-02-12 13:06:02,148 [Worker-758: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-02-12 13:06:02,149 [Worker-758: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 13:06:02,149 [Worker-758: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\ASSIGNMENTS\ProductService\websiteEshoppingZone\src\test\resources
+2019-02-12 14:17:34,872 [Worker-778: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 14:17:34,874 [Worker-778: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-02-12 14:17:34,877 [Worker-778: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-02-12 14:17:34,879 [Worker-778: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 14:17:34,879 [Worker-778: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\ASSIGNMENTS\ProductService\websiteEshoppingZone\src\test\resources
+2019-02-12 14:22:36,156 [Worker-778: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-12 14:22:36,157 [Worker-778: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\ASSIGNMENTS\ProductService\wallet-service-master\zuul-API\src\main\resources
+2019-02-12 14:22:36,157 [Worker-778: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\ASSIGNMENTS\ProductService\wallet-service-master\zuul-API\src\main\resources
+2019-02-12 14:22:36,159 [Worker-778: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
