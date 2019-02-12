@@ -45,7 +45,7 @@ public class ProductServiceTest {
 		Map<String, String> specification = new HashMap<String, String>();
 		specification.put("SpectOne", "two compartments");
 		specification.put("SpectTwo", "Adjustable strap");
-		product = new Product(101, "handbag", "bags and Luggage", rating, review, image, 1500.00, "good product",
+		product = new Product(101, "handbag","capresee", "bags and Luggage", rating, review, image, 1500.00, "good product",
 				specification);
 	}
 

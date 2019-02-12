@@ -20,6 +20,8 @@ public interface ProductService {
 	void deleteProductById(int productId);
 
 	List<Product> getProductByCategory(String category);
+
+	List<Product> getProductByType(String productType);
 	
 
 }

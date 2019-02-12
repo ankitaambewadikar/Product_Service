@@ -23,7 +23,7 @@ public class ProductTest {
 		image.add("imageOne");
 		Map<String, String> specification = new HashMap<String, String>();
 		specification.put("SpectOne", "two compartments");
-		Product product = new Product(101,"handbag","bags and Luggage",rating,review,image,1400.00,"good product",specification);
+		Product product = new Product(101,"handbag","capresee","bags and Luggage",rating,review,image,1400.00,"good product",specification);
 		assertEquals(product.getProductId(), 101);
 		assertThat(product.getProductId(),Matchers.equalTo(101));
 		assertEquals(product.getProductName(), "handbag");

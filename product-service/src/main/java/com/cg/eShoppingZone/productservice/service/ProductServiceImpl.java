@@ -37,7 +37,7 @@ public class ProductServiceImpl implements ProductService {
 	public Optional<Product> getProductByName(String productName) {
 
 		Optional<Product> findByName = productRepository.findByProductName(productName);
-		
+
 		return findByName;
 	}
 
@@ -57,6 +57,12 @@ public class ProductServiceImpl implements ProductService {
 	public List<Product> getProductByCategory(String category) {
 		List<Product> productCategory = productRepository.findByCategory(category);
 		return productCategory;
+	}
+
+	@Override
+	public List<Product> getProductByType(String productType) {
+		List<Product> product = productRepository.findByProductType(productType);
+		return product;
 	}
 
 }

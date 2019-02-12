@@ -49,6 +49,13 @@ public class ProductResource {
 		return new ResponseEntity<>(product.get(), HttpStatus.OK);
 	}
 
+	@GetMapping("/type/{productType}")
+	public ResponseEntity<List<Product>> getProductByType(@PathVariable String productType) {
+
+		List<Product> product = productService.getProductByType(productType);
+		return new ResponseEntity<>(product, HttpStatus.OK);
+	}
+
 	@GetMapping("/productName/{productName}")
 	public ResponseEntity<Product> getProductByName(@PathVariable String productName) {
 
