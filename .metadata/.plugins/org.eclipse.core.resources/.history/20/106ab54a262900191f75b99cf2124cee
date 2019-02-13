@@ -1,2 +1,0 @@
-server.port=8989
-spring.datasource.name=products_db

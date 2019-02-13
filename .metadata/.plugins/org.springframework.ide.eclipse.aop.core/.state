@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
 <aop-project name="product-service"/>
+<aop-project name="Project-ProfileService-master"/>
+<aop-project name="cart-service"/>
+<aop-project name="config-server"/>
+<aop-project name="eureka-server"/>
+<aop-project name="websiteEshoppingZone">
+<aspect-definition advice-class-name="com.netflix.hystrix.contrib.javanica.aop.aspectj.HystrixCommandAspect" advice-method-name="methodsAnnotatedWithHystrixCommand(org.aspectj.lang.ProceedingJoinPoint)" advice-type="AROUND" aspect-end-line-number="-1" aspect-name="hystrixCommandAspect" aspect-start-line-number="-1" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/websiteEshoppingZone/src/main/java/com/cg/eShoppingZone/websiteEshoppingZone/WebsiteEshoppingZoneApplication.java" pointcut-expression="hystrixCommandAnnotationPointcut() || hystrixCollapserAnnotationPointcut()" proxy-target-class="true">
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:websiteEshoppingZone|3:java:com.cg.eShoppingZone.websiteEshoppingZone.WebsiteEshoppingZoneApplication|8:websiteEshoppingController:19" bean-file="/websiteEshoppingZone/src/main/java/com/cg/eShoppingZone/websiteEshoppingZone/controller/WebsiteEshoppingController.java" bean-start-line="19" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/websiteEshoppingZone/src/main/java/com/cg/eShoppingZone/websiteEshoppingZone/WebsiteEshoppingZoneApplication.java" source="=websiteEshoppingZone/C:\/Users\/aambewad\/.m2\/repository\/com\/netflix\/hystrix\/hystrix-javanica\/1.5.12\/hystrix-javanica-1.5.12.jar&lt;com.netflix.hystrix.contrib.javanica.aop.aspectj(HystrixCommandAspect.class[HystrixCommandAspect~methodsAnnotatedWithHystrixCommand~Lorg.aspectj.lang.ProceedingJoinPoint;" source-start-line="-1" target="=websiteEshoppingZone/src\/main\/java&lt;com.cg.eShoppingZone.websiteEshoppingZone.controller{WebsiteEshoppingController.java[WebsiteEshoppingController~getCategory~QString;~QModel;" target-start-line="90"/>
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:websiteEshoppingZone|3:java:com.cg.eShoppingZone.websiteEshoppingZone.WebsiteEshoppingZoneApplication|8:websiteEshoppingController:19" bean-file="/websiteEshoppingZone/src/main/java/com/cg/eShoppingZone/websiteEshoppingZone/controller/WebsiteEshoppingController.java" bean-start-line="19" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/websiteEshoppingZone/src/main/java/com/cg/eShoppingZone/websiteEshoppingZone/WebsiteEshoppingZoneApplication.java" source="=websiteEshoppingZone/C:\/Users\/aambewad\/.m2\/repository\/com\/netflix\/hystrix\/hystrix-javanica\/1.5.12\/hystrix-javanica-1.5.12.jar&lt;com.netflix.hystrix.contrib.javanica.aop.aspectj(HystrixCommandAspect.class[HystrixCommandAspect~methodsAnnotatedWithHystrixCommand~Lorg.aspectj.lang.ProceedingJoinPoint;" source-start-line="-1" target="=websiteEshoppingZone/src\/main\/java&lt;com.cg.eShoppingZone.websiteEshoppingZone.controller{WebsiteEshoppingController.java[WebsiteEshoppingController~getAllProducts" target-start-line="39"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="ewallet"/>
+<aop-project name="Order-Service-master"/>
+<aop-project name="zuul-API"/>
 </aop-reference-model>

@@ -21,14 +21,14 @@ public class ProductServiceApplication {
 		SpringApplication.run(ProductServiceApplication.class, args);
 	}
 
-	@Bean
+	/*@Bean
 	public CommandLineRunner addData(ProductRepository productRepository) {
 		Map<Integer, Double> rating = new HashMap<Integer, Double>();
 		rating.put(1, 10.00);
 		Map<Integer, String> review = new HashMap<Integer, String>();
 		review.put(1, "Excellent");
 		List<String> image = new ArrayList<String>();
-		image.add("C:/Users/aambewad/Desktop/Images/101.jpg");
+		image.add("https://github.com/ankitaambewadikar/Images_product_service/blob/experimental/101.jpg?raw=true");
 		Map<String, String> specification = new HashMap<String, String>();
 		specification.put("SpectOne", "two compartments");
 		specification.put("SpectTwo", "Adjustable strap");
@@ -40,6 +40,6 @@ public class ProductServiceApplication {
 					specification));
 		};
 
-	}
+	}*/
 
 }

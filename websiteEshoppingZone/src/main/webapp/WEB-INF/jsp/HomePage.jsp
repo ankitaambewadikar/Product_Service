@@ -11,6 +11,7 @@
 
 <li><a href="products">Get All Products</a></li>
 <li><a href="productById">Get Product By Id</a></li>
+<li><a href="productByType">Get Products Type</a></li>
 <li><a href="productByName">Get Product By Name</a></li>
 <li><a href="productByCategory">Get Products Category</a></li>
 <li><a href="updateProduct">Update Product Details</a></li>

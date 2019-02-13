@@ -1,6 +1,7 @@
 <%@  page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@ taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%-- <%@ page import="com.mongodb.Mongo" %> --%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +28,7 @@
 		<th> Category </th>
 		<th> Ratings </th>
 		<th> Review </th> 
-		<!-- <th> Images </th> -->
+		<th> Images </th>
 		<th> Price </th>
 		<th> Description </th>
 		<th> Specification </th>
@@ -40,7 +41,7 @@
 				<td>${product.category}</td>
 				 <td>
                     <table>
-                        <jstl:forEach var="rating" items="${productList.rating}">
+                        <jstl:forEach var="rating" items="${product.rating}">
                             <tr style="font-style: italic;">
                                 <td>${rating.key}</td>
                                 <td>${rating.value}</td>
@@ -50,7 +51,7 @@
                 </td>
                 <td>
                     <table>
-                        <jstl:forEach var="review" items="${productList.review}">
+                        <jstl:forEach var="review" items="${product.review}">
                             <tr style="font-style: italic;">
                                 <td>${review.key}</td>
                                 <td>${review.value}</td>
@@ -58,12 +59,17 @@
                         </jstl:forEach>   
                     </table>
                 </td>
-				
+                <td>
+                <jstl:forEach var="image" items="${product.image}">
+                	<img class="img-responsive" src=${image} width="100" height="145"/>
+                </jstl:forEach>
+                </td>
+				<%-- <td>${product.image}</td> --%>
 				<td>${product.price}</td>
 				<td>${product.description}</td>
 				<td>
                     <table>
-                        <jstl:forEach var="specification" items="${productList.specification}">
+                        <jstl:forEach var="specification" items="${product.specification}">
                             <tr style="font-style: italic;">
                                 <td>${specification.key}</td>
                                 <td>${specification.value}</td>
@@ -85,7 +91,7 @@
 		<jstl:forEach var="productList" items="${productList}">
             <tr>
                 <td>${productList.productId}</td>
-                <td>${product.productType}</td>
+                <td>${productList.productType}</td>
                 <td>${productList.productName}</td>
                 <td>${productList.category}</td>
                 <td>
@@ -109,6 +115,11 @@
                     </table>
                 </td>
                 <%-- <td>${productsList.image}</td> --%>
+                <td>
+                <jstl:forEach var="image" items="${productList.image}">
+                	<img class="img-responsive" src=${image} width="100" height="145"/>
+                </jstl:forEach>
+                </td>
                 <td>${productList.price}</td>
                 <td>${productList.description}</td>
                 <td>
