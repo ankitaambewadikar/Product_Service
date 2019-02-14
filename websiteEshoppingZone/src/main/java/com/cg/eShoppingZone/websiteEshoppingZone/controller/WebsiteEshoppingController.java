@@ -1,6 +1,8 @@
 package com.cg.eShoppingZone.websiteEshoppingZone.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
@@ -22,7 +24,7 @@ public class WebsiteEshoppingController {
 	RestTemplate restTemplate;
 
 	Product product;
-
+	private Double keyValue;
 	@RequestMapping("/home")
 	public String homepage() {
 		return "HomePage";
@@ -34,7 +36,7 @@ public class WebsiteEshoppingController {
 	 * String getProducts() { return "AllProducts"; }
 	 */
 
-	@HystrixCommand(fallbackMethod = "noServiceOne")
+	/* @HystrixCommand(fallbackMethod = "noServiceOne") */
 	@RequestMapping("/products")
 	public ModelAndView getAllProducts() {
 		List<Product> productList = restTemplate.getForObject("http://localhost:8989/products", List.class);
@@ -50,7 +52,7 @@ public class WebsiteEshoppingController {
 
 	}
 
-	public String noServiceTwo(Model model) {
+	public String noServiceTwo(@RequestParam("productId") int productId,Model model) {
 		String message = "Service Not Available";
 		model.addAttribute("message", message);
 		return "NoService";
@@ -126,8 +128,7 @@ public class WebsiteEshoppingController {
 
 	@RequestMapping("/update")
 	public String updatedProductDetails(@RequestParam("productId") int productId, Model model) {
-		Product product = restTemplate.getForObject("http://localhost:8989/products/{productId}", Product.class,
-				productId);
+		Product product = restTemplate.getForObject("http://localhost:8989/products/"+productId, Product.class);
 
 		model.addAttribute(product);
 		return "UpdateDetails";
@@ -135,10 +136,52 @@ public class WebsiteEshoppingController {
 	}
 
 	@RequestMapping("/updatedb")
-	public String update(@RequestParam("price") Double price) {
-		System.out.println(price);
-		restTemplate.put("http://localhost:8989/products", price);
-		System.out.println("After" + price);
+	public String update(@RequestParam("productId") Integer productId,
+			@RequestParam("price") Double price, @RequestParam("ratingKey") Integer ratingKey, 
+			@RequestParam("ratingValue") Double ratingValue,@RequestParam("reviewKey") Integer reviewKey, 
+			@RequestParam("reviewValue") String reviewValue,Model model) {
+		boolean flag = false;
+		Product product = restTemplate.getForObject("http://localhost:8989/products/"+productId, Product.class);	
+		Map<Integer, Double> updateRatingMap = new HashMap<Integer, Double>();
+		updateRatingMap.put(ratingKey, ratingValue);
+		Map<Integer, Double> existingRatingMap = product.getRating();
+		//System.out.println("111"+updateRatingMap);
+		for(int keyOfElement : product.getRating().keySet()) {
+			if(ratingKey == keyOfElement ) {
+				keyValue = product.getRating().get(ratingKey);
+				if(ratingValue > keyValue) {
+					Double result = ratingValue - keyValue;
+					updateRatingMap.put(ratingKey, keyValue + result);
+					//updateRatingMap.put(ratingKey, value);
+					//flag = true;
+				}
+				else {
+					updateRatingMap.put(ratingKey, keyValue);
+				}
+				flag = true;
+			}
+		}
+		existingRatingMap.putAll(updateRatingMap);
+		//System.out.println("222"+existingRatingMap);
+		Map<Integer, String> updateReviewMap = new HashMap<Integer, String>();
+		updateReviewMap.put(reviewKey, reviewValue);
+		
+		Map<Integer, String> existingReviewMap = product.getReview();
+		for (int keyOfElement : product.getReview().keySet()) {
+			if (reviewKey == keyOfElement) {
+				String keyValue = product.getReview().get(reviewKey);
+				updateReviewMap.put(reviewKey, keyValue);
+				flag = true;
+			}
+
+		}
+		existingReviewMap.putAll(updateReviewMap);
+		product.setPrice(price);
+		product.setRating(existingRatingMap);
+		product.setReview(existingReviewMap);
+		System.out.println("Product:"+product);
+		restTemplate.put("http://localhost:8989/products",product);
+		model.addAttribute(product);
 		return "AllProducts";
 
 	}
