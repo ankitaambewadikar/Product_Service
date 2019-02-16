@@ -61,7 +61,7 @@
                 </td>
                 <td>
                 <jstl:forEach var="image" items="${product.image}">
-                	<img class="img-responsive" src=${image} width="100" height="145"/>
+                	<img  class="img-rounded" src=${image} width="100" height="145"/>
                 </jstl:forEach>
                 </td>
 				<%-- <td>${product.image}</td> --%>
